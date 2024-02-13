@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en" data-theme="dracula"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.3.6"><!-- Primary Meta Tags --><title>ProdNote</title><meta name="title" content="ProdNote"><meta name="description" content="O &#34;ProdNote&#34; é uma aplicação web Desenvolvido para simplificar a gestão de produção em fábricas, o ProdNote permite registrar a produção via QR Codes, gerar relatórios detalhados e analisar indicadores de desempenho."><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://astrofy-template.netlify.app/blog/prodnote/"><meta property="og:title" content="ProdNote"><meta property="og:description" content="O &#34;ProdNote&#34; é uma aplicação web Desenvolvido para simplificar a gestão de produção em fábricas, o ProdNote permite registrar a produção via QR Codes, gerar relatórios detalhados e analisar indicadores de desempenho."><meta property="og:image" content="https://astrofy-template.netlify.app/prodnote.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://astrofy-template.netlify.app/blog/prodnote/"><meta property="twitter:title" content="ProdNote"><meta property="twitter:description" content="O &#34;ProdNote&#34; é uma aplicação web Desenvolvido para simplificar a gestão de produção em fábricas, o ProdNote permite registrar a produção via QR Codes, gerar relatórios detalhados e analisar indicadores de desempenho."><meta property="twitter:image" content="https://astrofy-template.netlify.app/prodnote.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><link rel="stylesheet" href="/_astro/_page_.D8xqK4lX.css" />
+<style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);-webkit-clip-path:inset(50%);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}.time-line-container>div:last-child .education__time>.education__line{display:none}
+</style><script type="module" src="/_astro/hoisted.DqR2iBSn.js"></script></head> <body> <div class="bg-base-100 drawer lg:drawer-open"> <input id="my-drawer" type="checkbox" class="drawer-toggle"> <div class="drawer-content bg-base-100"> <div class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"> <div class="navbar"> <div class="navbar-start"> <label for="my-drawer" class="btn btn-square btn-ghost"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </label> </div> <div class="navbar-center"> <a class="btn btn-ghost normal-case text-xl" href="/">Leandro Santino ⚡️</a> </div> <div class="navbar-end"></div> </div> </div> <div class="md:flex md:justify-center"> <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">  <main class="md:flex md:justify-center"> <article class="prose prose-lg max-w-[750px] prose-img:mx-auto"> <img src="/prodnote.png" alt="ProdNote" class="w-full mb-6" width="750" height="422" loading="lazy" decoding="async"> <h1 class="title my-2 text-4xl font-bold">ProdNote</h1> <time>Feb 13, 2024</time> <br>  <a href="/blog/tag/node.js" class="badge badge-outline ml-2 no-underline"> node.js </a><a href="/blog/tag/react.js" class="badge badge-outline ml-2 no-underline"> react.js </a><a href="/blog/tag/fastify" class="badge badge-outline ml-2 no-underline"> fastify </a><a href="/blog/tag/TRPC" class="badge badge-outline ml-2 no-underline"> TRPC </a>  <div class="divider my-2"></div>  <p>O <em><strong>“ProdNote”</strong></em> é uma aplicação web para PCP (Planejamento e Controle de Produção), ela permite registrar a quantidade de itens produzidos através da leitura de QrCodes, gerar relatórios de produção, realizar análise dos indicadores de produção com dashboards, além de contar com um sistema de usuários que possibilita segmentar o acesso aos recursos de acordo com as permissões de cada usuário.</p>
+
+
+
+
+
+
+
+<table><thead><tr><th align="center"><img src="https://raw.githubusercontent.com/leandrosantino/prodnote/master/docs/image2.PNG" alt="image2"></th><th align="center"><img src="https://raw.githubusercontent.com/leandrosantino/prodnote/master/docs/image1.PNG" alt="image1"></th></tr></thead></table>
+<h2 id="como-surgiu-a-ideia-do-projeto">Como surgiu a ideia do projeto</h2>
+<p>O <em><strong>“prodnote”</strong></em> foi idealizado para solucionar o problema de uma fábrica de tetos e revestimentos internos para veículos. Eles estavam com dificuldade para gerenciar a quantidade de peças produzidas por dia. Antes da implementação do projeto essa gestão era feita de forma totalmente manual, o que gerava muitos erros e gargalos no processo.</p>
+<p>Então o <em><strong>“prodnote”</strong></em> veio com o objetivo de facilitar o gerenciamento dos produtos através da automatização das tarefas que antes eram feitas de forma manual, e isso seria feito através de etiquetas com qrCodes que seriam coladas na embalagem do produto, e então o produto só seria liberado para o estoque quando essas etiquetas fossem registradas no sistema.</p>
+<p>Esta solução não só resolveria o problema do gargalo na gestão dos produtos, mas também permitiria o surgimento de uma base de dados centralizada com o histórico de produção da fábrica, e através desses dados seria possível a criação de relatórios e dashboards, que seriam utilizados para auxiliar a tomada de decisões no setor administrativo.</p>
+<p>Com a ideia pronta, um MVP do sistema foi criado e testado. Ele funcionou perfeitamente bem, foi necessário alguns ajustes durante o o processo, mas o objetivo foi atingido. Durante os teste foi notado que com as informações armazenadas pelo sistema poderia ser gerado os valores de alguns indicadores importantes da fábrica como o OEE (Overall Equipment Effectiveness), mas para isso seria necessário mais algumas informações. Então foi decidido que seria criado um sistema centralizado que captaria todos esses dados, e gerenciaria tudo isso para fornecer as informações necessárias. Dai surgiu a ideia dos usuários para restringir o acesso as funcionalidades entre os setores da fábrica. por fim tudo isso levou a construção do <em><strong>“prodnote”</strong></em> como um sistema de PCP (Planejamento e Controle de Produção).</p>
+<h2 id="veja-o-prodnote-funcionando">Veja o ProdNote funcionando</h2>
+<p><a href="https://youtu.be/t-G0onpEY_E"><img src="https://raw.githubusercontent.com/leandrosantino/prodnote/master/docs/tamb.png" alt="tamb"></a></p>
+<h4 id="link-para-o-repositório">Link para o Repositório</h4>
+<p><a href="https://github.com/leandrosantino/prodnote">github.com/leandrosantino/prodnote</a></p>
+<h4 id="post-no-linkeding">Post no Linkeding</h4>
+<p><a href="https://www.linkedin.com/posts/leandro-santino-7b2717215_fala-galera-blz-estou-desenvolvendo-um-activity-7076725026552524800-2bD2?utm_source=share&#x26;utm_medium=member_desktop">Linkedin - LeandroSantino_ProdNote</a></p>
+<h2 id="funcionalidades">Funcionalidades</h2>
+<ul>
+<li>
+<p><strong>Gerar de Etiquetas</strong></p>
+<ul>
+<li>Criar etiquetas de produtos produzido, já com o qrCode e com códigos de identificação únicos.</li>
+<li>Alterar a quantidades das embalagem em caso de embalagens fracionadas</li>
+</ul>
+</li>
+<li>
+<p><strong>Gerenciar Produtos</strong></p>
+<ul>
+<li>Registrar Produtos</li>
+<li>Atualizar as Informações</li>
+<li>Excluir Produtos <em><strong>(adm)</strong></em></li>
+</ul>
+</li>
+<li>
+<p><strong>Gestão de Eficiência de Produção</strong></p>
+<ul>
+<li>Formulário de Registro</li>
+<li>Dashboard</li>
+</ul>
+</li>
+<li>
+<p><strong>Usuário Administrativo</strong></p>
+<ul>
+<li>Acesso a todas as outras funcionalidades</li>
+</ul>
+</li>
+</ul>
+<h2 id="stack-utilizada">Stack utilizada</h2>
+<p><strong>Front-end:</strong></p>
+<ul>
+<li><a href="https://react.dev/">React</a>;</li>
+<li><a href="https://www.typescriptlang.org/">typescript</a>;</li>
+<li><a href="https://styled-components.com/">styledComponents</a>;</li>
+<li><a href="https://reactrouter.com/en/main">react-router-dom</a>.</li>
+</ul>
+<p><strong>Back-end:</strong></p>
+<ul>
+<li><a href="https://nodejs.org/en">Node</a></li>
+<li><a href="https://www.typescriptlang.org/">typescript</a></li>
+<li><a href="https://www.fastify.io/">fastify</a></li>
+<li><a href="https://trpc.io/">trpc</a></li>
+<li><a href="https://zod.dev/">zod</a></li>
+</ul>
+<h2 id="instalação">Instalação</h2>
+<p>Para rodar o projeto na sua máquina, você pode clonar o repositprio con o comando:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#B392F0">  git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/leandosantino/prodnote.git</span></span></code></pre>
+<p>Depois de clonado entre na pasta do projeto.</p>
+<p>Para inicializar o sistema será necessário executar dois comando, um para o servidor e outro para o react, cada comando deve ser executado em um instância do cmd.</p>
+<h3 id="servidor">Servidor:</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#B392F0">  npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> server</span></span></code></pre>
+<h3 id="react">React:</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#B392F0">  npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> dev</span></span></code></pre>
+<p>Pronto o sistema estará funcionando na sua rede local.</p>
+<h2 id="aprendizados">Aprendizados</h2>
+<p>Com o desenvolvimento deste projeto pude aplicar diversos conceitos de programação que aumentaram significativamente o meu conhecimento, como:</p>
+<ul>
+<li>
+<p><strong>Programação orientada a objetos:</strong> minha linguagem mãe é o javascript, que a no geral é utilizada com o paradigma funcional, por isso a minha forma de pensar sempre foi do ponto de vista funcional, com o <em><strong>“prodnote”</strong></em> optei por sair da zona de conforto e aplicar o paradigma de orientação a objetos, esta escolha me trouxe um ponto de vista completamento novo, o que expandiu os meus horizontes, trazendo flexibilidade na forma como eu construo as minhas soluções.</p>
+</li>
+<li>
+<p><strong>SOLID</strong>: quando comecei a estudar POO, acabei descobrindo os princípios SOLID, e decidir aproveitar a deste projeto para estudar estes conceitos e poder aplicar-los ná prática.</p>
+</li>
+<li>
+<p><strong>Design Patterns</strong>: junto com o SOLID, vinharam alguns padrões de design como o “Repository Pattern”, que eram necessários para a implementação do mesmo, o que mes fez conhecer padrões muito interessantes, que com certeza levarei por toda minha carreira.</p>
+</li>
+<li>
+<p><strong>Testes Automatizados</strong>: o <em><strong>“prodnote”</strong></em> também me permitiu aplicar pela primeira vês, testes automatizados, com isso tive a oportunidade de aprender muito sobre a utilização do “jest” e nos métodos de testes.</p>
+</li>
+</ul>
+<p>Além dos pontos citados também testei e aprendi a utilizar bibliotecas como: <strong>commitzen, commintLint, lintstage, husk e eslint</strong>. Essas libs me permitiram padronizar o projeto tanto no código quanto nas mensagens de commits do repositório.</p>
+<h2 id="licença">Licença</h2>
+<p>Este software é licenciado sob a <a href="https://github.com/leandrosantino/prodnote/blob/master/LICENSE">AGPLv3</a></p>  </article> </main>  </main> </div> <footer class="footer footer-center block mb-5 pt-10"> <div class="pb-2">
+&copy; 2024 Leandro Santino
+</div> <div class="inline opacity-75">
+Developed by <a href="https://manuelernestog.github.io" target="_blank" class="font-bold">Leandro Santino</a> using
+<!-- Thanks for using this template. You can keep this line to support my work :) --> <a href="https://astrofy-template.netlify.app/" target="_blank" class="font-bold">Astrofy Template ⚡️</a> </div> </footer>  </div> <div class="drawer-side z-40"> <label for="my-drawer" class="drawer-overlay"></label> <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col"> <div class="w-fit mx-auto mt-5 mb-6"> <a href="/"> <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto"> <div class="w-[8.5rem]"> <img src="https://avatars.githubusercontent.com/u/76908036?v=4" class="mask mask-circle" alt="Profile image" width="300" height="300" loading="lazy" decoding="async"> </div> </div> </a> </div> <ul class="menu grow shrink menu-md overflow-y-auto"> <li><a class="py-3 text-base" id="home" href="/">Home</a></li> <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li> <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li> <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li> </ul> <script>(function(){const sideBarActiveItemID = undefined;
+const activeClass = "bg-base-300";
+
+const activeItemElem = document.getElementById(sideBarActiveItemID);
+activeItemElem && activeItemElem.classList.add(activeClass);
+})();</script> <div class="block sticky pointer-events-none bottom-10 bg-base-200 justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"></div> <div class="social-icons px-4 pb-5 pt-1 flex self-center justify-center sticky bottom-0 bg-base-200"> <a href="https://github.com/leandrosantino" target="_blank" class="mx-3" aria-label="Github" title="Github"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor;transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path> </svg> </a> <a href="https://www.linkedin.com/in/leandro-santino-7b2717215/" target="_blank" class="mx-3" aria-label="Linkedin" title="Linkedin"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor;transform: ;msFilter:;"><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path> </svg> </a> </div> </aside> </div> </div> </body></html>
