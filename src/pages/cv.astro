@@ -1,0 +1,94 @@
+---
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Perfil</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Sou um entusiasta da tecnologia e estou constantemente em busca de desafios estimulantes. 
+    Para mim, desenvolver software é mais do que uma ocupação; é a satisfação de criar soluções 
+    que melhoram a vida das pessoas. Minha paixão está em explorar novas tecnologias 
+    diariamente e enfrentar desafios com entusiasmo. Estou comprometido em contribuir para 
+    o avanço tecnológico, utilizando minhas habilidades para fazer uma diferença positiva. 
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Educação</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Bacharelado em Ciências da Computação"
+      subtitle="ago, 2023 (Cursando). Estácio de Sá, Recife-PE"
+    />
+    <TimeLineElement
+      title=" Curso de Java"
+      subtitle="fev, 2024 (cursando). DIO, Online"
+    />
+    <TimeLineElement
+      title="Curso de Javascript "
+      subtitle="40 horas. Plataforma Curso em vídeo, Online"
+    />
+    <TimeLineElement
+      title="Projeto Api Java + SpringBoot"
+      subtitle="5 horas. Rocketseat, Online"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experiências</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="I9Tech (Desenvolvedor Freelancer)"
+      subtitle="De Nov, 2023 até Dez, 2023"
+    >
+      Ajustes e criação de interfaces em Angular Framework; Ajustes e criação de rotas em WEB API construída com Java + SpringBoot.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Adler Pelzer Group"
+      subtitle="De Nov, 2023 até Dez, 2023. Jovem Aprendiz"
+    >
+      Criação de sistema para gestão e apontamento de produção;
+      Criação de sistema para gerenciamento de almoxarifado; 
+      Criação de planilhas e dashboards administrativos;
+    </TimeLineElement>
+  </div>
+
+  <!-- <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+  </ul> -->
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Node.Js</li>
+    <li>Typescript</li>
+    <li>React.js</li>
+    <li>Java</li>
+    <li>SpringBoot</li>
+    <li>Angular</li>
+    <li>PostgreSQL</li>
+    <li>SQLServer</li>
+    <li>SQLite</li>
+    <li>Docker</li>
+    <li>Git</li>
+    <li>GitHub</li>
+  </ul>
+</BaseLayout>

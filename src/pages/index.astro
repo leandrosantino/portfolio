@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import createSlug from "../lib/createSlug";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-8 mt-5">
+    <!-- <div class="text-xl py-1">👋</div> -->
+    <div class="text-5xl font-bold">Leandro Santino</div>
+    <div class="text-3xl py-3 font-bold">Desenvolvedor Web Full-Stack</div>
+    <div class="py-2">
+      <img class="my-6 h-10" src="https://skillicons.dev/icons?i=java,spring,angular,nodejs,ts,react,docker,postgresql,sqlite,git" alt="">
+      <text class="text-lg">
+        Olá! Sou um entusiasta em <strong>desenvolvimento web full-stack</strong> com sede de conhecimento e paixão por gerar valor através do meu código.
+        <br><br>
+        Atualmente, estou cursando bacharelado em <strong>Ciências da Computação</strong>, mas também sou autodidata há mais de 3 anos, mergulhando profundamente nas tecnologias que compõem minha stack: Node.js, React.js, TypeScript, Java, Spring Boot e Angular.
+        <br><br>
+        Desenvolver softwares é mais do que uma profissão para mim, é uma paixão. Adoro construir ferramentas que facilitem a vida das pessoas e me encanta a ideia de transformar um simples arquivo em branco em um mundo de complexidade e lógica.
+        <br><br>
+        Estou sempre aberto a novas oportunidades de colaboração e aprendizado. Vamos construir algo incrível juntos! 🚀
+      </text>
+    </div>
+    <div class="mt-6">
+      <a class="btn" href="mailto:leandrosantino2013@gmail.com" target="_blank"> contate-me!</a>
+      <a href="https://github.com/leandrosantino" target="_blank" class="btn btn-outline ml-5">
+        GitHub
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Meus Projetos (top-3): </div>
+  </div>
+
+  <HorizontalCard
+    title="poupa.online"
+    img="/poupaonline.png"
+    desc='A ideia por trás do "Poupa.online" é criar um site semelhante a uma vaquinha online, porém restrito a um grupo específico de amigos ou familiares. O objetivo é permitir a definição de uma meta na qual cada membro do grupo contribuirá com uma quantidade predeterminada de pagamentos, colaborando para o alcance dessa meta coletiva.'
+    badge="New"
+    url="http://poupa.online/"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="ProdNote"
+    img="/prodnote.png"
+    desc='O "ProdNote" é uma aplicação web Desenvolvido para simplificar a gestão de produção em fábricas, o ProdNote permite registrar a produção via QR Codes, gerar relatórios detalhados e analisar indicadores de desempenho.'
+    url="https://github.com/leandrosantino/prodnote"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="SeeMyCode"
+    img="/smcode.png"
+    desc='O SeeMyCode é um clone da interface do "vscode", ele foi pensado para servir como um portifólio pessoal. Construído com NextJS e TailwindCSS, o seu objetivo não é recriar as funcionalidades de um editor de códigos, mas sim, aproveitar a interface familiar do "vscode" para divulgar os meus projetos.'
+    url="https://see-my-code.vercel.app/"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Ultimos Posts</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+</BaseLayout>

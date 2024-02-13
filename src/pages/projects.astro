@@ -1,0 +1,77 @@
+---
+import HorizontalCard from "../components/HorizontalCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Projetos em Produção</div>
+  </div>
+
+  <HorizontalCard
+    title="poupa.online"
+    img="/poupaonline.png"
+    desc='A ideia por trás do "Poupa.online" é criar um site semelhante a uma vaquinha online, porém restrito a um grupo específico de amigos ou familiares. O objetivo é permitir a definição de uma meta na qual cada membro do grupo contribuirá com uma quantidade predeterminada de pagamentos, colaborando para o alcance dessa meta coletiva.'
+    badge="New"
+    url="http://poupa.online/"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="SeeMyCode"
+    img="/smcode.png"
+    desc='O SeeMyCode é um clone da interface do "vscode", ele foi pensado para servir como um portifólio pessoal. Construído com NextJS e TailwindCSS, o seu objetivo não é recriar as funcionalidades de um editor de códigos, mas sim, aproveitar a interface familiar do "vscode" para divulgar os meus projetos.'
+    url="https://see-my-code.vercel.app/"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="TaskPlus"
+    img="/taskplus.png"
+    desc='O TaskPlus foi o meu primeiro projeto NextJs, ele é um site de tarefas que permite ao usuário criar tarefas públicas para que outras pessoas possam comentar nessas tarefas, além de permitir também a criação de tarefas privadas.'
+    url="https://see-my-code.vercel.app/"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold my-5">Projetos no Github</div>
+  </div>
+
+  <HorizontalCard
+    title="ProdNote"
+    img="/prodnote.png"
+    desc='O "ProdNote" é uma aplicação web Desenvolvido para simplificar a gestão de produção em fábricas, o ProdNote permite registrar a produção via QR Codes, gerar relatórios detalhados e analisar indicadores de desempenho.'
+    url="https://github.com/leandrosantino/prodnote"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="QuickOS"
+    img="/quickos.png"
+    desc='O "QuickOS" e um sistema de gestão de ordens de serviço preventivas, que engloba tanto a parte de planejamento das manutenções preventivas quanto a impressão das ordens e o registro de execução das mesmas. Ele foi construído como um programa nativo para o Windows, utilizando o "ElectronJS" como Framework.'
+    url="https://github.com/leandrosantino/QuickOS"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="WarehouseSystem"
+    img="/warehousesystem.png"
+    desc='O WarehouseSystem é um sistema de gestão de estoque, ele foi projetado para atender a demanda de um almoxarifado de manutenção, o programa fornece a possibilidade de registrar saídas e entradas de itens no estoque, permite a emissão de requisições de saídas, uma interface para controle do estoque e permite registar contagens de inventário através de um aplicativo móvel.'
+    url="https://github.com/leandrosantino/WarehouseSystem"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Cipher"
+    img="/cipher.png"
+    desc='O "Cipher" é um site que implementa o método de criptografia de mensagens, conhecido como: ”Cifra de Vigenère”. Ele possui uma interface simples construída com ReactJs, onde você pode, tanto criptografar quanto descriptografar uma mensagem.'
+    url="https://leandrosantino.github.io/Cipher/"
+  />
+
+
+
+</BaseLayout>
