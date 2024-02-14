@@ -5,7 +5,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astrofy-template.netlify.app',
+  site: 'https://leandrosantino.github.io',
+  dase: '/portifolio',
   server: {
     host: true
   },
