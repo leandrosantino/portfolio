@@ -7,12 +7,13 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  // site: 'https://leandrosantino.github.io',
-  // dase: '/portifolio',
-  // server: {
-  //   host: true
-  // },
+  site: 'https://leandrosantino.github.io',
+  server: {
+    host: true
+  },
   integrations: [mdx(), sitemap(), tailwind()],
-  output: "server",
-  adapter: netlify()
+  // output: "server",
+  adapter: netlify({
+    edgeMiddleware: true
+  })
 });
