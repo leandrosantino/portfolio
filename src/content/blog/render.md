@@ -1,9 +1,8 @@
 ---
 title: "Renderização condicional (ReactJs)"
-description: "Fala galera, hoje eu queria mostrar uma solução que criei para a renderização condicional de botões de páginas utilizando ReactJs. O contexto é o seguinte: Na aplicação que estou desenvolvendo os usuários tem permissões limitadas e por isso nem todos os botões de páginas podem aparecer quando ele estiver logado, para isso precisei criar o componente do botão de forma que o mesmo verificasse se o usuário que está logado tem permissão para acessá-lo."
-pubDate: "Sep 14 2024"
-heroImage: "/render.png"
-badge: "New"
+description: "Compartilhando uma solução eficiente para renderização condicional de botões de páginas no ReactJS! 💻 Controle o acesso com facilidade, exibindo botões apenas para usuários com permissões adequadas. 🚀"
+pubDate: "Feb 14 2024"
+heroImage: "/render4.png"
 tags: ["react.js", "Lógica de programação"]
 ---
 
